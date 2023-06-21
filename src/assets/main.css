@@ -1,9 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-body {
-  background: #e3e1ff;
-  color: #444;
+
+
+* {
+  color: #eee;
   font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #333;
 }
 .container {
   width: 90%;
@@ -11,7 +16,7 @@ body {
   margin: 80px auto;
   border-radius: 5px;
   box-shadow: 2px 4px 6px rgba(28, 6, 49, 0.1);
-  background: white;
+  background: #515151;
 }
 .error {
   color: #ff3f80;
