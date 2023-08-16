@@ -1,4 +1,4 @@
-# live-chat
+this is just my vue.js practice to understand composition API
 
 ## Project setup
 ```
