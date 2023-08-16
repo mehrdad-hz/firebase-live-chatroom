@@ -38,14 +38,14 @@ export default {
 
 <style scoped>
 form {
-  margin: 10px;
+  background: #112240;
 }
 
 textarea {
   width: 100%;
   max-width: 100%;
-  padding: 10px;
-  border: 2px solid #7f7f7f;
+  padding: 15px 25px;
+  border: none;
   outline: none;
   resize: none;
   background: transparent;

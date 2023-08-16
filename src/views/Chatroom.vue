@@ -1,8 +1,10 @@
 <template>
   <div class="container">
-    <Navbar />
-    <NewChatForm />
-    <ChatWindow />
+    <div class="chat-window-box">
+      <Navbar />
+      <ChatWindow />
+      <NewChatForm />
+    </div>
   </div>
 </template>
 

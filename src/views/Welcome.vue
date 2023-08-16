@@ -61,10 +61,11 @@ export default {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #eee;
+  border: none;
   outline: none;
-  color: #999;
+  color: #eee;
   margin: 10px auto;
+  background: #293b5c;
 }
 .welcome span {
   text-decoration: underline;

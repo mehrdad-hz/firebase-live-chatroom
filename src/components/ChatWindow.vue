@@ -1,7 +1,7 @@
 <template>
   <div class="chat-window">
     <div v-if="error">{{ error }}</div>
-    <div v-if="documents" class="messages">
+    <div v-if="documents" class="messages" ref="messages">
       <div v-for="doc in formattedDocuments" :key="doc.id" class="single">
         <span class="created-at">{{ doc.createdAt }}</span>
         <span class="name">{{ doc.name }}</span>
@@ -14,7 +14,7 @@
 <script>
 import getCollection from "@/composables/getCollection";
 import { formatDistanceToNow } from "date-fns";
-import { computed } from "vue";
+import { computed, onUpdated, ref } from "vue";
 
 export default {
   setup() {
@@ -30,15 +30,21 @@ export default {
       }
     });
 
-    return { error, documents, formattedDocuments };
+    const messages = ref(null);
+
+    onUpdated(() => {
+      messages.value.scrollTop = messages.value.scrollHeight;
+    });
+
+    return { error, documents, formattedDocuments, messages };
   },
 };
 </script>
 
 <style>
 .chat-window {
-  background: #515151;
-  padding: 10px 20px;
+  background: #233554;
+  padding: 10px 7px 10px 20px;
   border-top: 2px solid #636363;
 }
 .single {
@@ -59,5 +65,23 @@ export default {
 .messages {
   max-height: 400px;
   overflow: auto;
+}
+
+.messages {
+  scrollbar-width: auto;
+  scrollbar-color: #acacac;
+}
+.messages::-webkit-scrollbar {
+  width: 5px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #e3e3e3;
+  border-radius: 15px;
+  border: 3px solid #e3e3e3;
 }
 </style>

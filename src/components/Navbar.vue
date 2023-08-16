@@ -34,6 +34,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #112240;
 }
 nav p {
   margin: 2px auto;
