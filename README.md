@@ -1,4 +1,5 @@
-this is just my vue.js practice to understand composition API
+I created a live chatroom component for our b2b system's support section
+i recreate it using Vue.js and Firebase to share it here
 
 ## Project setup
 ```
